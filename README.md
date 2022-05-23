@@ -3,10 +3,6 @@
 # Awesome Books
 It's a project of Awesome books: plain JavaScript with objects
 
-## GitHub Pages Link
-
-- [@View Live](https://ritobrotomukherjee.github.io/capstone-one-fitness/pages)
-
 ## Built With
 
 - HTML5
