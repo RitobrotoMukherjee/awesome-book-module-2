@@ -29,3 +29,10 @@ button {
     margin: 10px 0;
     padding: 5px;
 }
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
