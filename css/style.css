@@ -1,24 +1,16 @@
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-section {
-    width: 75%;
-}
-
 #book-add {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: start;
-}
+ }
 
 input {
     width: 300px;
-    margin: 10px auto;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+button {
+    width: 100px;
+    margin: 10px 0;
     padding: 5px;
 }
