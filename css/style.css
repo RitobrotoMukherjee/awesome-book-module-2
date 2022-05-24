@@ -1,15 +1,19 @@
+:root {
+  --black: #000;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
   margin: 5px 10px;
-}
-
-#add-book-form {
-  display: flex;
-  flex-direction: column;
-  margin: 2px 0 0 10px;
 }
 
 input {
@@ -24,7 +28,57 @@ button {
   padding: 5px;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.dark {
+  background-color: rgb(183, 179, 179);
+}
+
+.light {
+  background-color: rgb(242, 237, 237);
+}
+
+#add-book-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2px 0 0 10px;
+}
+
 .book-list {
-  padding: 5px 20px;
-  text-align: justify;
+  border: 2px solid var(--black);
+  border-radius: 4px;
+}
+
+#book-list-wrapper::after {
+  display: block;
+  content: '';
+  margin: 30px auto;
+  width: 120px;
+  height: 3px;
+  background-color: var(--black);
+  border: 1px solid var(--black);
+  border-radius: 30px;
+}
+
+.book-list-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+}
+
+.book-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 0 20px;
+}
+
+.removeBtn {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 20px;
+  box-shadow: 1px 2px 2px 1px var(--black);
 }

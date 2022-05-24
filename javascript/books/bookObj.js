@@ -35,9 +35,11 @@ const bookStore = new BookStore();
 const getHTML = (books) => {
   let template = '<ul class="book-list">';
   books.forEach((book, i) => {
-    template += `<li class="book-list-items ${i % 2 !== 0 ? 'dark' : ''}">
-          <h5 class="book-items book-title">"${book.title}" by ${book.author}</h5>
-          <button id="btn-${i}" data-book-index="${i}" type="button" class="removeBtn">Remove</button>
+    template += `<li class="list-item ${i % 2 !== 0 ? 'dark' : 'light'}">
+          <div class="book-list-items">
+            <h5 class="book-items book-title">"${book.title}" by ${book.author}</h5>
+            <button id="btn-${i}" data-book-index="${i}" type="button" class="removeBtn">Remove</button>
+          </div>
         </li>`;
   });
   template += '</ul>';
