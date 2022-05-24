@@ -42,22 +42,23 @@ const getHTML = (books) => {
           </div>
         </li>`;
   });
-  template += '</ul>';
 
   if (books.length === 0) {
-    template = `<ul class="book-list">
+    template += `
       <li class="list-item light">
         <div class="book-list-items book-list-items-empty">
           <h5 class="book-items book-title">Book List is Empty</h5>
         </div>
       </li>
-    </ul>`;
+    `;
   }
+
+  template += '</ul>';
 
   return docRange.createContextualFragment(template);
 };
 
-listWrapper.append(getHTML(bookStore.getBooks()));
+listWrapper.append(getHTML(bookStore.books));
 
 export { bookStore };
 

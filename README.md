@@ -51,4 +51,5 @@ Give a ⭐️ if you like this project!
 
 ## Code Reviewers
 
-- 
+- Mihndim Julius [@Mihndim2020](https://github.com/Mihndim2020)
+- Ajise Toluwase [@Whoistolu](https://github.com/Whoistolu)
