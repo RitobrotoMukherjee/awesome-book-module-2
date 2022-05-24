@@ -1,4 +1,4 @@
-import { bookStore } from './bookObj.js';
+import { bookStore } from './books/bookObj.js';
 
 const inputTitle = document.getElementById('book-title');
 const inputAuthor = document.getElementById('book-author');
