@@ -44,7 +44,7 @@ const getHTML = (books) => {
   });
   template += '</ul>';
 
-  if(books.length === 0) {
+  if (books.length === 0) {
     template = `<ul class="book-list">
       <li class="list-item light">
         <div class="book-list-items book-list-items-empty">

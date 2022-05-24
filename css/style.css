@@ -29,6 +29,7 @@ button {
 .text-center {
   text-align: center;
 }
+
 .display-none {
   display: none;
 }
@@ -40,7 +41,7 @@ button {
 }
 
 .dark {
-  background-color:var(--darkBg);
+  background-color: var(--darkBg);
 }
 
 .light {
@@ -83,7 +84,6 @@ button {
 .removeBtn {
   margin: 0 20px;
 }
-
 
 #add-book-form {
   display: flex;

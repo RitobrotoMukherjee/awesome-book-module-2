@@ -13,7 +13,7 @@ const updateBooks = () => {
 
   const errorShow = document.querySelector('.error');
 
-  if(title !== '' && author !== ''){
+  if (title !== '' && author !== '') {
     errorShow.classList.add('display-none');
     bookStore.addBook(title, author);
     return window.location.reload();
