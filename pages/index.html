@@ -10,13 +10,31 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="header nav-items">
+                <h4>Awesome Books</h4>
+            </div>
+            <ul class="nav-link nav-items">
+                <li class="nav-link-items">
+                    <a class="nav-links" href="#book-list-section">List</a>
+                </li>
+                <li class="nav-link-items">
+                    <a class="nav-links" href="#add-books">Add New</a>
+                </li>
+                <li class="nav-link-items">
+                    <a class="nav-links" href="#contact-info-section">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <section id="book-list-section" class="text-center">
             <h1>Awesome Books</h1>
             <div id="book-list-wrapper">
             </div>
         </section>
-        <section id="add-books" class="text-center">
+        <section id="add-books" class="text-center display-none">
             <h2>Add a New Book</h2>
             <div id="add-book-form">
                 <div class="form-holder">
@@ -29,7 +47,15 @@
                 </div>
             </div>
         </section>
+        <section id="contact-info-section" class="text-center display-none">
+
+        </section>
     </main>
+    <footer>
+        <div id="copyright">
+            <h2>Copyright ...</h2>
+        </div>
+    </footer>
     <script type="module" src="../javascript/script.js"></script>
 </body>
 

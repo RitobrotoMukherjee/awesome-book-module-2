@@ -6,6 +6,9 @@
 body {
   font-family: 'Times New Roman', Times, serif;
 }
+header{
+  margin-bottom: 20px;
+}
 
 ul {
   list-style-type: none;
@@ -13,8 +16,30 @@ ul {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   margin: 5px 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid var(--black);
+}
+
+.nav-items {
+  flex: 1 1 auto;
+  margin: 0px 25px;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 button {
