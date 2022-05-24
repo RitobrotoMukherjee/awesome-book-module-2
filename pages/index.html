@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,29 @@
     <title>Awesome Books</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <main>
         <section id="book-list-section" class="text-center">
             <h1>Awesome Books</h1>
             <div id="book-list-wrapper">
             </div>
+        </section>
+        <section id="add-books" class="text-center">
+            <h2>Add a New Book</h2>
             <div id="add-book-form">
-                <input id="book-title" type="text" name="title" placeholder="Title" required>
-                <input id="book-author" type="text" name="author" placeholder="Author" required>
-                <button id="add-btn" type="button">
-                    Add
-                </button>
+                <div class="form-holder">
+                    <input id="book-title" type="text" name="title" placeholder="Title">
+                    <input id="book-author" type="text" name="author" placeholder="Author">
+                    <span class="error display-none">Title and Author fields are required</span>
+                    <button id="add-btn" type="button">
+                        Add
+                    </button>
+                </div>
             </div>
         </section>
     </main>
     <script type="module" src="../javascript/script.js"></script>
 </body>
+
 </html>

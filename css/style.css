@@ -1,5 +1,6 @@
 :root {
   --black: #000;
+  --darkBg: rgb(183, 179, 179);
 }
 
 body {
@@ -16,35 +17,34 @@ h1 {
   margin: 5px 10px;
 }
 
-input {
-  width: 300px;
-  margin: 10px 0;
-  padding: 5px;
-}
-
 button {
   width: 100px;
   margin: 10px 0;
   padding: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 1px 2px 2px 1px var(--black);
 }
 
 .text-center {
   text-align: center;
 }
+.display-none {
+  display: none;
+}
+
+.error {
+  font-size: 12px;
+  font-weight: 700;
+  color: red;
+}
 
 .dark {
-  background-color: rgb(183, 179, 179);
+  background-color:var(--darkBg);
 }
 
 .light {
   background-color: rgb(242, 237, 237);
-}
-
-#add-book-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2px 0 0 10px;
 }
 
 .book-list {
@@ -70,6 +70,10 @@ button {
   padding: 6px;
 }
 
+.book-list-items-empty {
+  justify-content: center;
+}
+
 .book-title {
   font-size: 18px;
   font-weight: 600;
@@ -77,8 +81,28 @@ button {
 }
 
 .removeBtn {
-  font-size: 15px;
-  font-weight: 600;
   margin: 0 20px;
-  box-shadow: 1px 2px 2px 1px var(--black);
 }
+
+
+/* form part design for Sirri */ 
+/* #add-book-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+input {
+  width: 300px;
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid var(--black);
+  border-radius: 3px;
+  box-shadow: 5px 5px 3px 3px var(--darkBg);
+} */
