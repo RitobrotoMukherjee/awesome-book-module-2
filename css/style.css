@@ -6,7 +6,7 @@ h1 {
   margin: 5px 10px;
 }
 
-#add-book-section {
+#add-book-form {
   display: flex;
   flex-direction: column;
   margin: 2px 0 0 10px;
