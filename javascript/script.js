@@ -1,4 +1,4 @@
-import { bookStore } from './bookObj.js';
+import { bookStore } from './books/bookObj.js';
 
 const inputTitle = document.getElementById('book-title');
 const inputAuthor = document.getElementById('book-author');
@@ -8,8 +8,17 @@ const addBookBtn = document.getElementById('add-btn');
 const removeBtn = document.querySelectorAll('.removeBtn');
 
 const updateBooks = () => {
-  bookStore.addBook(inputTitle.value, inputAuthor.value);
-  window.location.reload();
+  const title = inputTitle.value;
+  const author = inputAuthor.value;
+
+  const errorShow = document.querySelector('.error');
+
+  if (title !== '' && author !== '') {
+    errorShow.classList.add('display-none');
+    bookStore.addBook(title, author);
+    return window.location.reload();
+  }
+  return errorShow.classList.remove('display-none');
 };
 
 addBookBtn.addEventListener('click', updateBooks);
