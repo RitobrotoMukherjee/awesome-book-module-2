@@ -85,8 +85,7 @@ button {
 }
 
 
-/* form part design for Sirri */ 
-/* #add-book-form {
+#add-book-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,4 +104,4 @@ input {
   border: 1px solid var(--black);
   border-radius: 3px;
   box-shadow: 5px 5px 3px 3px var(--darkBg);
-} */
+}
