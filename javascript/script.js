@@ -32,13 +32,14 @@ contactLink.addEventListener('click', () => {
   contactPage.classList.remove('display-none');
 });
 
-listLink.addEventListener('click', () => {
-  const { books } = bookStore;
-  console.log(books);
+const updateList = () => {
   const bookList = document.querySelector('.book-list');
   bookList.remove();
   listWrapper.append(loadHTML.getHTML(bookStore.books));
+};
 
+listLink.addEventListener('click', () => {
+  updateList();
   listBookPage.classList.remove('display-none');
   addBooksPage.classList.add('display-none');
   contactPage.classList.add('display-none');
@@ -54,6 +55,8 @@ const updateBooks = () => {
     return errorShow.classList.remove('display-none');
   }
   bookStore.addBook(title, author);
+  inputTitle.value = '';
+  inputAuthor.value = '';
   return errorShow.classList.add('display-none');
 };
 
@@ -63,5 +66,8 @@ removeBtn.forEach((item) => {
   item.addEventListener('click', (ev) => {
     const bookIndex = ev.target.getAttribute('data-book-index');
     bookStore.removeBook(bookIndex);
+    setTimeout(() => {
+      updateList();
+    }, 500);
   });
 });
