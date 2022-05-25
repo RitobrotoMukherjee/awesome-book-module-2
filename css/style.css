@@ -12,6 +12,9 @@ header {
 }
 
 footer {
+  position: fixed;
+  width: 98%;
+  bottom: 1%;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -151,9 +154,12 @@ input {
 }
 
 #contact-info-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 70vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
 .contact-infos {

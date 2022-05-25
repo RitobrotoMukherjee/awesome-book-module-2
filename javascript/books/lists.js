@@ -7,7 +7,10 @@ class LoadHTML {
       template += `<li class="list-item ${i % 2 !== 0 ? 'dark' : 'light'}">
           <div class="book-list-items">
             <h5 class="book-items book-title">"${book.title}" by ${book.author}</h5>
-            <button id="btn-${i}" data-book-index="${i}" type="button" class="removeBtn">Remove</button>
+            <button id="btn-${i}" data-book-index="${i}" type="button" class="removeBtn">
+            Remove
+            <input type="hidden" value="${i}">
+            </button>
           </div>
         </li>`;
     });

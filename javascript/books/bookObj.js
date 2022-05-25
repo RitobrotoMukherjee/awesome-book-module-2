@@ -12,6 +12,9 @@ class BookStore extends BookList {
   }
 
   setLocalStorage() {
+    if (localStorage.getItem('bookStore')) {
+      localStorage.removeItem('bookStore');
+    }
     return localStorage.setItem('bookStore', JSON.stringify(this.books));
   }
 
