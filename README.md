@@ -53,3 +53,4 @@ Give a ⭐️ if you like this project!
 
 - Mihndim Julius [@Mihndim2020](https://github.com/Mihndim2020)
 - Ajise Toluwase [@Whoistolu](https://github.com/Whoistolu)
+- Isaí Céspedes Sánchez [@Lordkaito](https://github.com/Lordkaito)
