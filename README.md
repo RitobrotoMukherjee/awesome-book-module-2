@@ -30,16 +30,15 @@ It's a project of Awesome books: plain JavaScript with objects
 
 👤 **Sirri Celles**
 
-- Portfolio: [@Sirri](https://)
-- GitHub: [@Sirri](https://)
-- Twitter: [@Sirri](https://)
-- LinkedIn: [Sirri](https://)
+- GitHub: [@SirriCelles](https://github.com/SirriCelles)
+- Twitter: [@SirriCelles](https://twitter.com/SirriCelles?t=fZl0blItFUQDC5vozH47nA&s=09)
+- LinkedIn: [Sirri Celles](https://www.linkedin.com/in/sirri-celles)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-- Feel free to check the [issues page](../../issues/).
+- Feel free to check the [issues page](https://github.com/RitobrotoMukherjee/awesome-book-module-2/issues)
 
 ## Show your support
 
