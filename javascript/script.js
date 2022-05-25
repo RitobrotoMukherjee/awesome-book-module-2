@@ -22,13 +22,13 @@ const addBooksPage = document.querySelector('#add-books');
 const contactPage = document.querySelector('#contact-info-section');
 
 addLink.addEventListener('click', () => {
-  addBooksPage.style= 'display: block';
+  addBooksPage.style = 'display: block';
   listBookPage.style = 'display: none';
   contactPage.style = 'display: none';
 });
 
 contactLink.addEventListener('click', () => {
-  listBookPage.style = 'display: none'
+  listBookPage.style = 'display: none';
   addBooksPage.style = 'display: none';
   contactPage.style = 'display: flex';
 });
@@ -89,7 +89,6 @@ const updateBooks = () => {
   inputTitle.value = '';
   inputAuthor.value = '';
   return createBookList();
-
 };
 addBookBtn.addEventListener('click', updateBooks);
 
