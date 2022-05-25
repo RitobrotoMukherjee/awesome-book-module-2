@@ -3,7 +3,7 @@ import { bookStore } from './books/bookObj.js';
 const inputTitle = document.getElementById('book-title');
 const inputAuthor = document.getElementById('book-author');
 
-const addBookBtn = document.getElementById('add-btn');
+const addBookBtn = document.getElementById('#add-btn');
 
 const removeBtn = document.querySelectorAll('.removeBtn');
 
@@ -16,7 +16,6 @@ const updateBooks = () => {
   if (title !== '' && author !== '') {
     errorShow.classList.add('display-none');
     bookStore.addBook(title, author);
-    return window.location.reload();
   }
   return errorShow.classList.remove('display-none');
 };
@@ -27,6 +26,5 @@ removeBtn.forEach((item) => {
   item.addEventListener('click', (ev) => {
     const bookIndex = ev.target.getAttribute('data-book-index');
     bookStore.removeBook(bookIndex);
-    window.location.reload();
   });
 });
