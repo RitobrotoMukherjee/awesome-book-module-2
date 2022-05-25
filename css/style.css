@@ -11,6 +11,10 @@ header {
   margin-bottom: 20px;
 }
 
+main {
+  margin-top: 60px;
+}
+
 footer {
   display: flex;
   justify-content: start;
@@ -53,7 +57,6 @@ nav {
 
 .date-time {
   float: right;
-  margin-bottom: 9px;
 }
 
 button {
@@ -150,7 +153,7 @@ input {
   box-shadow: 5px 5px 3px 3px var(--darkBg);
 }
 
-#contact-info-section {
+.contact-info-section {
   display: flex;
   flex-direction: column;
   align-items: center;
