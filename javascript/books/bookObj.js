@@ -2,10 +2,6 @@ import { Book } from './book.js';
 
 import { BookList } from './setBookList.js';
 
-const docRange = document.createRange();
-
-const listWrapper = document.getElementById('book-list-wrapper');
-
 class BookStore extends BookList {
   constructor() {
     super();
@@ -30,8 +26,6 @@ class BookStore extends BookList {
   }
 }
 
-const bookStore = new BookStore();
-
 const getHTML = (books) => {
   let template = '<ul class="book-list">';
   books.forEach((book, i) => {
@@ -55,11 +49,9 @@ const getHTML = (books) => {
 
   template += '</ul>';
 
-  return docRange.createContextualFragment(template);
+  return template;
 };
 
-listWrapper.append(getHTML(bookStore.books));
+export { BookStore, getHTML };
 
-export { bookStore };
-
-export default {};
+export default null;

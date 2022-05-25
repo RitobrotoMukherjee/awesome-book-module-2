@@ -1,4 +1,10 @@
-import { bookStore } from './books/bookObj.js';
+import { BookStore, getHTML } from './books/bookObj.js';
+
+const bookStore = new BookStore();
+
+const docRange = document.createRange();
+const listWrapper = document.getElementById('book-list-wrapper');
+listWrapper.append(docRange.createContextualFragment(getHTML(bookStore.books)));
 
 const inputTitle = document.getElementById('book-title');
 const inputAuthor = document.getElementById('book-author');

@@ -10,6 +10,13 @@ header{
   margin-bottom: 20px;
 }
 
+footer{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: 2px solid var(--black);
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -120,6 +127,11 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.footer-items {
+  flex: 1 0 auto;
+  margin: 0px 10px;
 }
 
 input {
