@@ -6,11 +6,12 @@
 body {
   font-family: 'Times New Roman', Times, serif;
 }
-header{
+
+header {
   margin-bottom: 20px;
 }
 
-footer{
+footer {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -25,6 +26,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--black);
 }
 
 h1 {
@@ -40,13 +42,18 @@ nav {
 
 .nav-items {
   flex: 1 1 auto;
-  margin: 0px 25px;
+  margin: 0 25px;
 }
 
 .nav-link {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.date-time {
+  float: right;
+  margin-bottom: 9px;
 }
 
 button {
@@ -131,7 +138,7 @@ button {
 
 .footer-items {
   flex: 1 0 auto;
-  margin: 0px 10px;
+  margin: 0 10px;
 }
 
 input {
@@ -141,4 +148,25 @@ input {
   border: 1px solid var(--black);
   border-radius: 3px;
   box-shadow: 5px 5px 3px 3px var(--darkBg);
+}
+
+#contact-info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+}
+
+.contact-infos:last-child {
+  margin-bottom: 25px;
+}
+
+.contact-info-list-items {
+  list-style-type: circle;
 }

@@ -2,6 +2,10 @@ import { BookStore, getHTML } from './books/bookObj.js';
 
 const bookStore = new BookStore();
 
+// Only to show current date and time
+const today = new Date();
+document.getElementById('date-time').innerText = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()} ${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
+
 const docRange = document.createRange();
 const listWrapper = document.getElementById('book-list-wrapper');
 listWrapper.append(docRange.createContextualFragment(getHTML(bookStore.books)));
