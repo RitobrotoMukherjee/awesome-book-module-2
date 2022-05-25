@@ -11,6 +11,10 @@ header {
   margin-bottom: 20px;
 }
 
+main {
+  margin-top: 60px;
+}
+
 footer {
   position: fixed;
   width: 98%;
@@ -56,7 +60,6 @@ nav {
 
 .date-time {
   float: right;
-  margin-bottom: 9px;
 }
 
 button {
@@ -153,12 +156,10 @@ input {
   box-shadow: 5px 5px 3px 3px var(--darkBg);
 }
 
-#contact-info-section {
-  height: 70vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.contact-info-section {
+  display: none;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-infos {

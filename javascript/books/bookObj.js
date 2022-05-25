@@ -1,9 +1,6 @@
 import { Book } from './book.js';
-import { loadHTML } from './lists.js';
 
 import { BookList } from './setBookList.js';
-
-const listWrapper = document.getElementById('book-list-wrapper');
 
 class BookStore extends BookList {
   constructor() {
@@ -12,9 +9,6 @@ class BookStore extends BookList {
   }
 
   setLocalStorage() {
-    if (localStorage.getItem('bookStore')) {
-      localStorage.removeItem('bookStore');
-    }
     return localStorage.setItem('bookStore', JSON.stringify(this.books));
   }
 
@@ -32,10 +26,32 @@ class BookStore extends BookList {
   }
 }
 
-const bookStore = new BookStore();
+const getHTML = (books) => {
+  let template = '<ul class="book-list">';
+  books.forEach((book, i) => {
+    template += `<li id="list-id-${i}" class="list-item ${i % 2 !== 0 ? 'dark' : 'light'}">
+          <div class="book-list-items">
+            <h5 class="book-items book-title">"${book.title}" by ${book.author}</h5>
+            <button id="btn-${i}" data-book-index="${i}" type="button" class="removeBtn">Remove</button>
+          </div>
+        </li>`;
+  });
 
-listWrapper.append(loadHTML.getHTML(bookStore.books));
+  if (books.length === 0) {
+    template += `
+      <li class="list-item light">
+        <div class="book-list-items book-list-items-empty">
+          <h5 class="book-items book-title">Book List is Empty</h5>
+        </div>
+      </li>
+    `;
+  }
 
-export { bookStore };
+  template += '</ul>';
+
+  return template;
+};
+
+export { BookStore, getHTML };
 
 export default null;
