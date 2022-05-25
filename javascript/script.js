@@ -1,4 +1,5 @@
 import { bookStore } from './books/bookObj.js';
+import { loadHTML } from './books/lists.js';
 
 const inputTitle = document.getElementById('book-title');
 const inputAuthor = document.getElementById('book-author');
@@ -17,13 +18,7 @@ const listBookPage = document.querySelector('#book-list-section');
 const addBooksPage = document.querySelector('#add-books');
 const contactPage = document.querySelector('#contact-info-section');
 
-// const toggleClass = (element, claz) => {
-//   if (element.classList.contains(claz)) {
-//     element.classList.remove(claz);
-//   } else {
-//     element.classList.add(claz);
-//   }
-// };
+const listWrapper = document.getElementById('book-list-wrapper');
 
 addLink.addEventListener('click', () => {
   listBookPage.classList.add('display-none');
@@ -38,6 +33,12 @@ contactLink.addEventListener('click', () => {
 });
 
 listLink.addEventListener('click', () => {
+  const { books } = bookStore;
+  console.log(books);
+  const bookList = document.querySelector('.book-list');
+  bookList.remove();
+  listWrapper.append(loadHTML.getHTML(bookStore.books));
+
   listBookPage.classList.remove('display-none');
   addBooksPage.classList.add('display-none');
   contactPage.classList.add('display-none');
