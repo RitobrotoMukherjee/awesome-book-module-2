@@ -1,6 +1,9 @@
 import { Book } from './book.js';
+import { loadHTML } from './lists.js';
 
 import { BookList } from './setBookList.js';
+
+const listWrapper = document.getElementById('book-list-wrapper');
 
 class BookStore extends BookList {
   constructor() {
@@ -26,32 +29,10 @@ class BookStore extends BookList {
   }
 }
 
-const getHTML = (books) => {
-  let template = '<ul class="book-list">';
-  books.forEach((book, i) => {
-    template += `<li class="list-item ${i % 2 !== 0 ? 'dark' : 'light'}">
-          <div class="book-list-items">
-            <h5 class="book-items book-title">"${book.title}" by ${book.author}</h5>
-            <button id="btn-${i}" data-book-index="${i}" type="button" class="removeBtn">Remove</button>
-          </div>
-        </li>`;
-  });
+const bookStore = new BookStore();
 
-  if (books.length === 0) {
-    template += `
-      <li class="list-item light">
-        <div class="book-list-items book-list-items-empty">
-          <h5 class="book-items book-title">Book List is Empty</h5>
-        </div>
-      </li>
-    `;
-  }
+listWrapper.append(loadHTML.getHTML(bookStore.books));
 
-  template += '</ul>';
-
-  return template;
-};
-
-export { BookStore, getHTML };
+export { bookStore };
 
 export default null;
