@@ -37,7 +37,7 @@ a {
 }
 
 h1 {
-  margin: 5px 10px;
+  margin: 5px 0;
 }
 
 nav {
@@ -96,6 +96,7 @@ button {
 .book-list {
   border: 2px solid var(--black);
   border-radius: 4px;
+  width: 100%;
 }
 
 #book-list-wrapper::after {
@@ -156,17 +157,28 @@ input {
   box-shadow: 5px 5px 3px 3px var(--darkBg);
 }
 
-.contact-info-section {
-  display: none;
+#book-list-section {
+  display: flex;
+}
+
+.info-section {
   flex-direction: column;
   align-items: center;
 }
 
-.contact-infos {
+.section-infos {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 15px;
+}
+
+.contact-list-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  width: 95%;
 }
 
 .contact-infos:last-child {
